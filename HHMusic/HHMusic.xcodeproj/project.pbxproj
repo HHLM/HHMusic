@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF774B4C01C50170480392F8 /* libPods-HHMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9876DA7D3EB51E836379B3 /* libPods-HHMusic.a */; };
+		F51666901E5154090085456E /* HHPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F516668F1E5154090085456E /* HHPlayerVC.m */; };
+		F51666931E519F610085456E /* HHSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F51666921E519F610085456E /* HHSlider.m */; };
+		F51B30DE1E261B6B00454E46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B30DD1E261B6B00454E46 /* main.m */; };
+		F51B30E11E261B6B00454E46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B30E01E261B6B00454E46 /* AppDelegate.m */; };
+		F51B30E71E261B6B00454E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51B30E51E261B6B00454E46 /* Main.storyboard */; };
+		F51B30E91E261B6B00454E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51B30E81E261B6B00454E46 /* Assets.xcassets */; };
+		F51B30EC1E261B6B00454E46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51B30EA1E261B6B00454E46 /* LaunchScreen.storyboard */; };
+		F51B30F71E261B6B00454E46 /* HHMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B30F61E261B6B00454E46 /* HHMusicUITests.m */; };
+		F51B310A1E261E0100454E46 /* HHHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B31091E261E0100454E46 /* HHHomeVC.m */; };
+		F51B310D1E261E3000454E46 /* HHBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B310C1E261E3000454E46 /* HHBaseVC.m */; };
+		F51B31101E261E4300454E46 /* HHBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B310F1E261E4300454E46 /* HHBaseModel.m */; };
+		F51B31131E261E6F00454E46 /* HHAppdelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B31121E261E6F00454E46 /* HHAppdelegate.m */; };
+		F51B31181E2633C000454E46 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F51B31171E2633C000454E46 /* HTTPRequest.m */; };
+		F53C3BB11E53E234008F108B /* BindingAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C3BB01E53E234008F108B /* BindingAlertView.m */; };
+		F53C3BB61E557C4F008F108B /* HHMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C3BB51E557C4F008F108B /* HHMusicPlayer.m */; };
+		F5FA3BEA1E2768F4006ABA59 /* HHMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FA3BE91E2768F4006ABA59 /* HHMusicModel.m */; };
+		F5FA3BED1E279643006ABA59 /* HHRel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FA3BEC1E279643006ABA59 /* HHRel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F51B30F31E261B6B00454E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F51B30D11E261B6B00454E46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F51B30D81E261B6B00454E46;
+			remoteInfo = HHMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C03DCE39055879B7345D4A5 /* Pods-HHMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHMusic/Pods-HHMusic.release.xcconfig"; sourceTree = "<group>"; };
+		869A73B46678831E0853C179 /* Pods-HHMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHMusic/Pods-HHMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		9B9876DA7D3EB51E836379B3 /* libPods-HHMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F516668E1E5154090085456E /* HHPlayerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHPlayerVC.h; sourceTree = "<group>"; };
+		F516668F1E5154090085456E /* HHPlayerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHPlayerVC.m; sourceTree = "<group>"; };
+		F51666911E519F610085456E /* HHSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHSlider.h; sourceTree = "<group>"; };
+		F51666921E519F610085456E /* HHSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHSlider.m; sourceTree = "<group>"; };
+		F51B30D91E261B6B00454E46 /* HHMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51B30DD1E261B6B00454E46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F51B30DF1E261B6B00454E46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F51B30E01E261B6B00454E46 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		F51B30E61E261B6B00454E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F51B30E81E261B6B00454E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F51B30EB1E261B6B00454E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F51B30ED1E261B6B00454E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F51B30F21E261B6B00454E46 /* HHMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51B30F61E261B6B00454E46 /* HHMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHMusicUITests.m; sourceTree = "<group>"; };
+		F51B30F81E261B6B00454E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F51B31011E261CA100454E46 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F51B31081E261E0100454E46 /* HHHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHHomeVC.h; sourceTree = "<group>"; };
+		F51B31091E261E0100454E46 /* HHHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHHomeVC.m; sourceTree = "<group>"; };
+		F51B310B1E261E3000454E46 /* HHBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseVC.h; sourceTree = "<group>"; };
+		F51B310C1E261E3000454E46 /* HHBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseVC.m; sourceTree = "<group>"; };
+		F51B310E1E261E4300454E46 /* HHBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHBaseModel.h; sourceTree = "<group>"; };
+		F51B310F1E261E4300454E46 /* HHBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHBaseModel.m; sourceTree = "<group>"; };
+		F51B31111E261E6F00454E46 /* HHAppdelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAppdelegate.h; sourceTree = "<group>"; };
+		F51B31121E261E6F00454E46 /* HHAppdelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAppdelegate.m; sourceTree = "<group>"; };
+		F51B31161E2633C000454E46 /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		F51B31171E2633C000454E46 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		F53C3BAF1E53E234008F108B /* BindingAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingAlertView.h; sourceTree = "<group>"; };
+		F53C3BB01E53E234008F108B /* BindingAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingAlertView.m; sourceTree = "<group>"; };
+		F53C3BB41E557C4F008F108B /* HHMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMusicPlayer.h; sourceTree = "<group>"; };
+		F53C3BB51E557C4F008F108B /* HHMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMusicPlayer.m; sourceTree = "<group>"; };
+		F5FA3BE81E2768F4006ABA59 /* HHMusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHMusicModel.h; sourceTree = "<group>"; };
+		F5FA3BE91E2768F4006ABA59 /* HHMusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHMusicModel.m; sourceTree = "<group>"; };
+		F5FA3BEB1E279643006ABA59 /* HHRel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHRel.h; sourceTree = "<group>"; };
+		F5FA3BEC1E279643006ABA59 /* HHRel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHRel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F51B30D61E261B6B00454E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF774B4C01C50170480392F8 /* libPods-HHMusic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F51B30EF1E261B6B00454E46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F41E17022D6AB6070BCC239 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				869A73B46678831E0853C179 /* Pods-HHMusic.debug.xcconfig */,
+				7C03DCE39055879B7345D4A5 /* Pods-HHMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB16D3BC337E741145FF71DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B9876DA7D3EB51E836379B3 /* libPods-HHMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F51B30D01E261B6B00454E46 = {
+			isa = PBXGroup;
+			children = (
+				F51B30F51E261B6B00454E46 /* HHMusicUITests */,
+				F51B30DB1E261B6B00454E46 /* HHMusic */,
+				F51B30DA1E261B6B00454E46 /* Products */,
+				6F41E17022D6AB6070BCC239 /* Pods */,
+				CB16D3BC337E741145FF71DB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F51B30DA1E261B6B00454E46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F51B30D91E261B6B00454E46 /* HHMusic.app */,
+				F51B30F21E261B6B00454E46 /* HHMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F51B30DB1E261B6B00454E46 /* HHMusic */ = {
+			isa = PBXGroup;
+			children = (
+				F51B31071E261DC100454E46 /* Others */,
+				F51B31031E261DAE00454E46 /* Home */,
+				F51B31021E261D7F00454E46 /* Utils */,
+				F51B30DC1E261B6B00454E46 /* Supporting Files */,
+			);
+			path = HHMusic;
+			sourceTree = "<group>";
+		};
+		F51B30DC1E261B6B00454E46 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F51B30E51E261B6B00454E46 /* Main.storyboard */,
+				F51B30E81E261B6B00454E46 /* Assets.xcassets */,
+				F51B30EA1E261B6B00454E46 /* LaunchScreen.storyboard */,
+				F51B30ED1E261B6B00454E46 /* Info.plist */,
+				F51B31011E261CA100454E46 /* PrefixHeader.pch */,
+				F51B30DD1E261B6B00454E46 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F51B30F51E261B6B00454E46 /* HHMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F51B30F61E261B6B00454E46 /* HHMusicUITests.m */,
+				F51B30F81E261B6B00454E46 /* Info.plist */,
+			);
+			path = HHMusicUITests;
+			sourceTree = "<group>";
+		};
+		F51B31021E261D7F00454E46 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F51B31151E261F9500454E46 /* Tools */,
+				F51B31141E261F8400454E46 /* Network */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F51B31031E261DAE00454E46 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F51B31041E261DAE00454E46 /* Control */,
+				F51B31051E261DAE00454E46 /* Model */,
+				F51B31061E261DAE00454E46 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F51B31041E261DAE00454E46 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				F51B31081E261E0100454E46 /* HHHomeVC.h */,
+				F51B31091E261E0100454E46 /* HHHomeVC.m */,
+				F516668E1E5154090085456E /* HHPlayerVC.h */,
+				F516668F1E5154090085456E /* HHPlayerVC.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		F51B31051E261DAE00454E46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F53C3BB41E557C4F008F108B /* HHMusicPlayer.h */,
+				F53C3BB51E557C4F008F108B /* HHMusicPlayer.m */,
+				F5FA3BE81E2768F4006ABA59 /* HHMusicModel.h */,
+				F5FA3BE91E2768F4006ABA59 /* HHMusicModel.m */,
+				F5FA3BEB1E279643006ABA59 /* HHRel.h */,
+				F5FA3BEC1E279643006ABA59 /* HHRel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F51B31061E261DAE00454E46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F51666911E519F610085456E /* HHSlider.h */,
+				F51666921E519F610085456E /* HHSlider.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F51B31071E261DC100454E46 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F51B30DF1E261B6B00454E46 /* AppDelegate.h */,
+				F51B30E01E261B6B00454E46 /* AppDelegate.m */,
+				F51B31111E261E6F00454E46 /* HHAppdelegate.h */,
+				F51B31121E261E6F00454E46 /* HHAppdelegate.m */,
+				F51B310B1E261E3000454E46 /* HHBaseVC.h */,
+				F51B310C1E261E3000454E46 /* HHBaseVC.m */,
+				F51B310E1E261E4300454E46 /* HHBaseModel.h */,
+				F51B310F1E261E4300454E46 /* HHBaseModel.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		F51B31141E261F8400454E46 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F51B31161E2633C000454E46 /* HTTPRequest.h */,
+				F51B31171E2633C000454E46 /* HTTPRequest.m */,
+				F53C3BAF1E53E234008F108B /* BindingAlertView.h */,
+				F53C3BB01E53E234008F108B /* BindingAlertView.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F51B31151E261F9500454E46 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F51B30D81E261B6B00454E46 /* HHMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F51B30FB1E261B6B00454E46 /* Build configuration list for PBXNativeTarget "HHMusic" */;
+			buildPhases = (
+				AE71666BBD1A1EBEC19D869C /* [CP] Check Pods Manifest.lock */,
+				F51B30D51E261B6B00454E46 /* Sources */,
+				F51B30D61E261B6B00454E46 /* Frameworks */,
+				F51B30D71E261B6B00454E46 /* Resources */,
+				1015DAE9233791EF9F533682 /* [CP] Embed Pods Frameworks */,
+				0396D61B7A29D3FDEAB2F9AF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHMusic;
+			productName = HHMusic;
+			productReference = F51B30D91E261B6B00454E46 /* HHMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F51B30F11E261B6B00454E46 /* HHMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F51B30FE1E261B6B00454E46 /* Build configuration list for PBXNativeTarget "HHMusicUITests" */;
+			buildPhases = (
+				F51B30EE1E261B6B00454E46 /* Sources */,
+				F51B30EF1E261B6B00454E46 /* Frameworks */,
+				F51B30F01E261B6B00454E46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F51B30F41E261B6B00454E46 /* PBXTargetDependency */,
+			);
+			name = HHMusicUITests;
+			productName = HHMusicUITests;
+			productReference = F51B30F21E261B6B00454E46 /* HHMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F51B30D11E261B6B00454E46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HH;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = HHLM;
+				TargetAttributes = {
+					F51B30D81E261B6B00454E46 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YM2MZ34492;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					F51B30F11E261B6B00454E46 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F51B30D81E261B6B00454E46;
+					};
+				};
+			};
+			buildConfigurationList = F51B30D41E261B6B00454E46 /* Build configuration list for PBXProject "HHMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F51B30D01E261B6B00454E46;
+			productRefGroup = F51B30DA1E261B6B00454E46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F51B30D81E261B6B00454E46 /* HHMusic */,
+				F51B30F11E261B6B00454E46 /* HHMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F51B30D71E261B6B00454E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51B30EC1E261B6B00454E46 /* LaunchScreen.storyboard in Resources */,
+				F51B30E91E261B6B00454E46 /* Assets.xcassets in Resources */,
+				F51B30E71E261B6B00454E46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F51B30F01E261B6B00454E46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0396D61B7A29D3FDEAB2F9AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HHMusic/Pods-HHMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1015DAE9233791EF9F533682 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HHMusic/Pods-HHMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE71666BBD1A1EBEC19D869C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F51B30D51E261B6B00454E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51B30E11E261B6B00454E46 /* AppDelegate.m in Sources */,
+				F51B310D1E261E3000454E46 /* HHBaseVC.m in Sources */,
+				F53C3BB61E557C4F008F108B /* HHMusicPlayer.m in Sources */,
+				F51B30DE1E261B6B00454E46 /* main.m in Sources */,
+				F5FA3BEA1E2768F4006ABA59 /* HHMusicModel.m in Sources */,
+				F51B310A1E261E0100454E46 /* HHHomeVC.m in Sources */,
+				F51666931E519F610085456E /* HHSlider.m in Sources */,
+				F51666901E5154090085456E /* HHPlayerVC.m in Sources */,
+				F51B31131E261E6F00454E46 /* HHAppdelegate.m in Sources */,
+				F5FA3BED1E279643006ABA59 /* HHRel.m in Sources */,
+				F51B31181E2633C000454E46 /* HTTPRequest.m in Sources */,
+				F51B31101E261E4300454E46 /* HHBaseModel.m in Sources */,
+				F53C3BB11E53E234008F108B /* BindingAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F51B30EE1E261B6B00454E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51B30F71E261B6B00454E46 /* HHMusicUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F51B30F41E261B6B00454E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F51B30D81E261B6B00454E46 /* HHMusic */;
+			targetProxy = F51B30F31E261B6B00454E46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F51B30E51E261B6B00454E46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F51B30E61E261B6B00454E46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F51B30EA1E261B6B00454E46 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F51B30EB1E261B6B00454E46 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F51B30F91E261B6B00454E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F51B30FA1E261B6B00454E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F51B30FC1E261B6B00454E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869A73B46678831E0853C179 /* Pods-HHMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YM2MZ34492;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HHMusic/PrefixHeader.pch";
+				INFOPLIST_FILE = HHMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HHL.HHMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F51B30FD1E261B6B00454E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C03DCE39055879B7345D4A5 /* Pods-HHMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YM2MZ34492;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HHMusic/PrefixHeader.pch";
+				INFOPLIST_FILE = HHMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HHL.HHMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F51B30FF1E261B6B00454E46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HHMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HHL.HHMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HHMusic;
+			};
+			name = Debug;
+		};
+		F51B31001E261B6B00454E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HHMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HHL.HHMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HHMusic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F51B30D41E261B6B00454E46 /* Build configuration list for PBXProject "HHMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F51B30F91E261B6B00454E46 /* Debug */,
+				F51B30FA1E261B6B00454E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F51B30FB1E261B6B00454E46 /* Build configuration list for PBXNativeTarget "HHMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F51B30FC1E261B6B00454E46 /* Debug */,
+				F51B30FD1E261B6B00454E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F51B30FE1E261B6B00454E46 /* Build configuration list for PBXNativeTarget "HHMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F51B30FF1E261B6B00454E46 /* Debug */,
+				F51B31001E261B6B00454E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F51B30D11E261B6B00454E46 /* Project object */;
+}
