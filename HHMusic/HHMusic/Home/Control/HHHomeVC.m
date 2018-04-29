@@ -47,6 +47,53 @@
     music.type = @"n";
     music.sid = @"000";
     [self hh_musicInfoWithModel:music];
+//    [self group];
+}
+
+- (void)group {
+    dispatch_group_t group =  dispatch_group_create();
+    
+    for (int i = 0; i < 10; i ++)
+    {
+        dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+            [self requestfilterData];
+            //1
+        });
+    }
+    
+    dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+        //汇总结果
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //UI操作
+            
+        });
+    });
+    
+}
+
+
+-(void)requestfilterData
+{
+     NSString *kBaseURL = @"http://douban.fm/j/mine/playlist?type=n&sid=0&pt=0&channel=1&from=mainsite";
+    NSURL *url = [NSURL URLWithString:kBaseURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
+    
+    [request setHTTPMethod:@"POST"];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    
+    NSData *data =[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (error) {
+        NSLog(@" good commet list recv data error");
+    }else
+    {
+        NSLog(@"----%@",data);
+        
+        NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+    }
 }
 
 
@@ -112,7 +159,7 @@
     [HHMusicModel getMusicInfoWithSid:model.sid type:model.type pt:@"" blcok:^(id data, NSError *eror) {
         music = data;
         NSLog(@"音乐信息：%@---%@",music.sid,music.url);
-        [self playMusicInfo];
+//        [self playMusicInfo];
     }];
 }
 - (void)next
