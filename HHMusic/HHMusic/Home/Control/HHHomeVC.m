@@ -47,7 +47,11 @@
     music.type = @"n";
     music.sid = @"000";
     [self hh_musicInfoWithModel:music];
+<<<<<<< HEAD
 //    [self group];
+=======
+    [self group];
+>>>>>>> e720904b37e9d5cf033d59d533ce2e4c21e96fd7
 }
 
 - (void)group {
@@ -100,12 +104,16 @@
 #pragma mark -- 调整音乐
 - (void)sliderValueChanged:(UISlider *)slider
 {
-   [HHMusicPlayer playManager].currentTime = slider.value  *  [music.length integerValue];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [HHMusicPlayer playManager].currentTime = slider.value  *  [music.length integerValue];
+    });
+   
 }
 
 - (void)starUpdateProgress
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updataProgress) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     [[HHMusicPlayer playManager] play];
     //开启定时器
     [self.timer setFireDate:[NSDate date]];
@@ -157,9 +165,20 @@
 - (void)hh_musicInfoWithModel:(HHMusicModel *)model
 {
     [HHMusicModel getMusicInfoWithSid:model.sid type:model.type pt:@"" blcok:^(id data, NSError *eror) {
+<<<<<<< HEAD
         music = data;
         NSLog(@"音乐信息：%@---%@",music.sid,music.url);
 //        [self playMusicInfo];
+=======
+        if (!eror) {
+            music = data;
+            NSLog(@"音乐信息：%@---%@",music.sid,music.url);
+            [self playMusicInfo];
+        }else {
+            
+        }
+       
+>>>>>>> e720904b37e9d5cf033d59d533ce2e4c21e96fd7
     }];
 }
 - (void)next
@@ -170,6 +189,7 @@
 }
 - (void)playMusicInfo
 {
+    //http://mr3.doubanio.com/13cf655ccd62929da443427da3829152/0/fm/song/p2741515_128k.mp4
     //播放音乐
     [[HHMusicPlayer playManager] playMusicWithURL:music.url didFinish:^{
         [self next];
