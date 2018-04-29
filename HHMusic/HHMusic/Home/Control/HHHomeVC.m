@@ -47,18 +47,69 @@
     music.type = @"n";
     music.sid = @"000";
     [self hh_musicInfoWithModel:music];
+    [self group];
+}
+
+- (void)group {
+    dispatch_group_t group =  dispatch_group_create();
+    
+    for (int i = 0; i < 10; i ++)
+    {
+        dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+            [self requestfilterData];
+            //1
+        });
+    }
+    
+    dispatch_group_notify(group, dispatch_get_global_queue(0, 0), ^{
+        //汇总结果
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            //UI操作
+            
+        });
+    });
+    
+}
+
+
+-(void)requestfilterData
+{
+     NSString *kBaseURL = @"http://douban.fm/j/mine/playlist?type=n&sid=0&pt=0&channel=1&from=mainsite";
+    NSURL *url = [NSURL URLWithString:kBaseURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
+    
+    [request setHTTPMethod:@"POST"];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    
+    NSData *data =[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (error) {
+        NSLog(@" good commet list recv data error");
+    }else
+    {
+        NSLog(@"----%@",data);
+        
+        NSLog(@"%@",[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil]);
+    }
 }
 
 
 #pragma mark -- 调整音乐
 - (void)sliderValueChanged:(UISlider *)slider
 {
-   [HHMusicPlayer playManager].currentTime = slider.value  *  [music.length integerValue];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [HHMusicPlayer playManager].currentTime = slider.value  *  [music.length integerValue];
+    });
+   
 }
 
 - (void)starUpdateProgress
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updataProgress) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     [[HHMusicPlayer playManager] play];
     //开启定时器
     [self.timer setFireDate:[NSDate date]];
@@ -110,9 +161,14 @@
 - (void)hh_musicInfoWithModel:(HHMusicModel *)model
 {
     [HHMusicModel getMusicInfoWithSid:model.sid type:model.type pt:@"" blcok:^(id data, NSError *eror) {
-        music = data;
-        NSLog(@"音乐信息：%@---%@",music.sid,music.url);
-        [self playMusicInfo];
+        if (!eror) {
+            music = data;
+            NSLog(@"音乐信息：%@---%@",music.sid,music.url);
+            [self playMusicInfo];
+        }else {
+            
+        }
+       
     }];
 }
 - (void)next
@@ -123,6 +179,7 @@
 }
 - (void)playMusicInfo
 {
+    //http://mr3.doubanio.com/13cf655ccd62929da443427da3829152/0/fm/song/p2741515_128k.mp4
     //播放音乐
     [[HHMusicPlayer playManager] playMusicWithURL:music.url didFinish:^{
         [self next];
